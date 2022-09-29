@@ -1,5 +1,5 @@
 //2022.09.20
 #include <stdio.h>
 
-int main_HelloWorld() {
+int main() {
 	printf("Hello World \n");
