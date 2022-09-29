@@ -1,0 +1,12 @@
+//2022.09.26 Visual studio 에서 수행하지않고 (virtual machine) CentOS_7 에서 수행함
+
+int main() {
+#if __STDC_VERSION__ >= 201112L
+        printf("c11\n");
+#elif __STDC_VERSION__ >= 199901L
+        printf("c99\n");
+#else
+        printf("c95\n");
+#endif
+        return 0;
+}
