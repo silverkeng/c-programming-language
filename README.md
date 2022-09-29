@@ -1,1 +1,1 @@
-# C language study record
+# (KMA) C language study record
