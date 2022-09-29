@@ -1,8 +1,11 @@
-//2022.09.22
+// 2022.09.22, 29 (2 days study)
+// 사용 한 함수 if else break continue switch
 
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 
-int main_rand(void)
+int main(void)
 {
 	//버스를 탄다고 가정, 학생 / 일반인으로 구분 (일반인 : 20세)
 	/*int age = 25;
@@ -76,7 +79,99 @@ int main_rand(void)
 		printf("값이 서로 다르네요\n");
 	}*/
 
-	
+	//가위 0, 바위 1, 보 2
+	//srand(time(NULL));
+	//int i = rand() % 3; //0 ~ 2 반환 
+	//printf("%d 를 컴퓨터가 골랐습니다.\n", i);
 
+	//if (i == 0)
+	//{
+	//	printf("가위\n");
+	//}
+	//else if (i == 1)
+	//{
+	//	printf("바위\n");
+	//}
+	//else if (i == 2)
+	//{
+	//	printf("보\n");
+	//}
+	//else
+	//{
+	//	printf("몰라요\n");
+	//}
+
+
+	////스위치 case
+	//
+	//srand(time(NULL));
+	//int i = rand() % 3; //0 ~ 2 반환 
+	//printf("%d 를 컴퓨터가 골랐습니다.\n", i);
+
+	//switch (i)
+	//{
+	//case 0:printf("가위\n"); break;
+	//case 1:printf("바위\n"); break;
+	//case 2:printf("보\n"); break;
+	//default:printf("몰라요\n"); break;
+	//}
+
+
+	//나이에 따른 신분을 스위치 케이스로 변경해보기
+
+	/*	int age = 9;
+		switch (age)
+		{
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:printf("초등학생 입니다\n"); break;
+		case 14:
+		case 15:
+		case 16:printf("중학생 입니다.\n"); break;
+		case 17:
+		case 18:
+		case 19:printf("고등학생 입니다.\n"); break;
+		default:printf("학생이 아니군요!\n"); break;
+		}*/
+
+	//프로젝트 Up and Down
+	srand(time(NULL));
+	int num = rand() % 100 + 1; // 1 ~ 100
+	printf("뽑힌 숫자 : %d\n", num);
+	int answer = 0; // 정답
+	int chance = 5; // 기회
+	while (chance > 0)
+	{
+		printf("남은 기회는 %d 번 입니다.\n", chance--);
+		printf("숫자를 맞혀 보세요 (1 ~ 100) : ");
+		scanf_s("%d", &answer);
+
+		if (answer > num)
+		{
+			printf("%d 보다 DOWN ↓ \n\n", answer);
+		}
+		else if (answer < num)
+		{
+			printf("%d 보다 UP ↑ \n\n", answer);
+		}
+		else if (answer = num)
+		{
+			printf("\n\n %d 번만에 맞췄습니다. \n %d 정답입니다!!!\n\n", 5 - chance ,answer);
+			break;
+		}
+		else
+		{
+			printf("알 수 없는 오류가 발생 했습니다.\n\n");
+		}
+
+		if (chance == 0)
+		{
+			printf("모든 기회를 다 사용하셨습니다. 실패!!!!!!!\n\n");
+			break;
+		}
+	}
 	return 0;
 }
