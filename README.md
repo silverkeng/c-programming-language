@@ -1,1 +1,1 @@
-# C language study record
+# (self-education) C language study record
