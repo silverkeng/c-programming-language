@@ -1,0 +1,17 @@
+//2022.10.14
+
+#include <stdio.h>
+
+int main()
+{
+  int num;
+	printf("3과 5 배수의 합을 더할 최대 수는?  : ");
+	scanf_s("%d", &num);
+
+	
+	int sum3x = (num / 3) * (num / 3 + 1) * 1.5;
+	int sum5x = (num / 5) * (num / 5 + 1) * 2.5;
+	int sum15x = (num / 15) * (num / 15 + 1) * 7.5;
+	printf("%d 의 3과 5 배수의 합은 %d 입니다. \n", num, sum3x + sum5x - sum15x);
+  return 0;
+}
