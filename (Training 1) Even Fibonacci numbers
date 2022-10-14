@@ -1,0 +1,27 @@
+//2022.10.14
+
+#include <stdio.h>
+
+int main()
+{
+	int a = 0, b = 0, c = 1, total = 0, cnt = 0, max;
+	printf("피보나치 수열 짝수 합계의 한계수를 적어주세요 : ");
+	scanf_s("%d", &max);
+	
+	while (c < max)
+	{
+		a = b;
+		b = c;
+
+		if (c % 2 == 0)
+		{
+		total += c;
+		}
+
+		c = a + b;
+		cnt++;
+	}
+	printf("\n피보나치 수열 %d 미만 짝수의 합계는 %d 입니다. \nloop를 %d 회 수행 하였습니다.\n", max, total, cnt - 1);
+
+	return 0;
+}
