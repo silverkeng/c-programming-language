@@ -1,2 +1,27 @@
-//2022.10.16
+//2022.10.16 & 2022.10.21
 
+#include <stdio.h>
+
+int main()
+{
+    const long long numm = 600851475143;
+    long long newnumm = numm;
+    long largestNum = 0;
+
+    int cnt = 2;
+    while (cnt * cnt <= newnumm) 
+    {
+        if (newnumm % cnt == 0) 
+        {
+            newnumm = newnumm / cnt;
+        }
+        else
+        {
+            cnt++;
+        }
+    }
+    printf("The largest primefactor of 600851475143 is %lld", newnumm);
+    
+
+	return 0;
+}
